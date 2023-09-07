@@ -21,7 +21,7 @@ export const projects: TProject[] = [
     description: "Meu portifólio desenvolvido com Next, Typescript e Tailwind CSS. Também utilizei o Pattern de Composição para toda a base do projeto.",
     image: "portfolio.svg",
     link: "https://joandersonreis.vercel.app",
-    github: "https://github.com/JoandersonReis/portifolio",
+    github: "https://github.com/JoandersonReis/portfolio",
     technologies: [ "react", "typescript", "tailwind"]
   },
   {
