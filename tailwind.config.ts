@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss'
+import defaultTheme from "tailwindcss/defaultTheme"
 
 const config: Config = {
   content: [
@@ -8,11 +9,28 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      screens: {
+        "cell": "500px"
       },
+      fontFamily: {
+        oswald: ['"Oswald"', ...defaultTheme.fontFamily.sans]
+      },
+      backgroundImage: {
+        'banner-universe': "url('/assets/images/banner-background.svg')",
+        "main-background": "url('/assets/images/body-background.svg')",
+        "profile-background": "url('/assets/images/profile-background.svg')",
+        "contact-background": "url('/assets/images/contact-background.svg')",
+      },
+      animation: {
+        'scroll': "scroll 20s infinite"
+      },
+      keyframes: {
+        scroll: {
+          '0%': {transform: 'translateX(0)'},
+          '50%': {transform: 'translateX(-100vw)'},
+          '100%': {transform: 'translateX(0)'},
+        }
+      }
     },
   },
   plugins: [],
